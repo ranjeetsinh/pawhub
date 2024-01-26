@@ -23,3 +23,6 @@ class Item(models.Model):
     is_adopted = models.BooleanField(default = False)
     created_by = models.ForeignKey(User, related_name = 'item', on_delete = models.CASCADE )
     created_at = models.DateTimeField(auto_now_add = True)
+
+    def __str__(self):
+        return self.name
